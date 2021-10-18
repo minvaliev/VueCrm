@@ -19,7 +19,7 @@ export default  {
                     name: name
                 })
             } catch (e) {
-                commit('setError',e)
+                commit('  setError',e)
                 throw е
             }
         },
