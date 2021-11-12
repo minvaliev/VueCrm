@@ -3,9 +3,11 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import Vuelidate from "vuelidate";
 import Paginate from 'vuejs-paginate'
+import VueMeta from 'vue-meta'
 import router from './router'
 import store from './store'
 import messagePlugin from '@/utils/message.plugin'
+import titlePlugin from '../src/utils/title.plugin'
 import Loader from "./components/app/Loader";
 import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
@@ -20,6 +22,9 @@ import tooltipDirective from "./directives/tooltip.directive"
 Vue.config.productionTip = false
 
 Vue.use(Vuelidate)
+Vue.use(titlePlugin)
+Vue.use(VueMeta)
+Vue.use(localizeFilter)
 Vue.use(VueRouter)
 Vue.component('Loader', Loader)
 Vue.filter('currency', currencyFilter)

@@ -53,6 +53,11 @@
 
 <script>
     export default {
+        metaInfo() {
+            return {
+                title: this.$title('Home_Page')
+            }
+        },
         name: "HomePage"
     }
 </script>
