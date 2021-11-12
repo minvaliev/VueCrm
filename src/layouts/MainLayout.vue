@@ -5,7 +5,7 @@
 
             <Navbar @menu-hide="isOpen = !isOpen" />
 
-            <Sidebar :isOpen="isOpen" />
+            <Sidebar :isOpen="isOpen" :key="locale" />
 
             <main class="app-content" :class="{full: !isOpen}">
                 <div class="app-page">
@@ -46,6 +46,9 @@
         computed: {
             error() {
                 return this.$store.getters.error
+            },
+            locale() {
+                return this.$store.getters.info.locale
             }
         },
         watch: {

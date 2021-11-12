@@ -14,6 +14,7 @@ import firebase from "firebase/compat";
 import 'firebase/auth'
 import 'firebase/database'
 import currencyFilter from "./filters/currency.filter";
+import localizeFilter from "./filters/localize.filter";
 import tooltipDirective from "./directives/tooltip.directive"
 
 Vue.config.productionTip = false
@@ -22,6 +23,7 @@ Vue.use(Vuelidate)
 Vue.use(VueRouter)
 Vue.component('Loader', Loader)
 Vue.filter('currency', currencyFilter)
+Vue.filter('localize', localizeFilter)
 Vue.directive('tooltip', tooltipDirective)
 Vue.use(messagePlugin)
 Vue.component('Paginate', Paginate)
